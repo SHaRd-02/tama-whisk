@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="Es">
+
+<head>
+	<meta charset="utf-8">
+	<title>Tamagochi Whisky</title>
+	<meta name="author" content="Ricardo Hernandez">
+	<meta name="description" content="Tamagochi app about my dog">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./styles.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<link rel="icon" type="image/x-icon" href=""/>
+	<link rel="manifest" href="./manifest.json">
+	<script>
+		// En tu archivo principal (por ejemplo, app.js o index.js)
+		if ('serviceWorker' in navigator) {
+		  navigator.serviceWorker.register('./service-worker.js')
+			.then(function(registration) {
+			  console.log('ServiceWorker registrado con éxito:', registration);
+			})
+			.catch(function(error) {
+			  console.log('Error al registrar el ServiceWorker:', error);
+			});
+		};
+	</script>
+</head>
+
+<body>
+	<header id="header">
+		<div class="div-header">
+			<h3>Vida: </h3>
+			<progress value="" max="100" min="0" id="health"></progress>
+		</div>
+		<div class="div-header">
+			<h3>Felicidad: </h3>
+			<progress value="80" max="100" min="0" id="happinnes"></progress>
+		</div>
+		<div class="div-header-money">
+			<h3>Dinero: </h3>
+			<span id="money"></span>
+		</div>
+	</header>
+	<main>
+		<!-- Remove class hidden -->
+		<div id="dog-screen" class="">
+			<div class="bubble typewriter fade" id="bubble">
+				<p id="bubble-text"></p>
+			</div>
+			<div class="dog-frame">
+				<div class="pixelart"></div>
+			</div>
+		</div>
+		
+		<div id="food-screen" class="hidden">
+			<h2 >Comida</h2>
+			<h3>Croquetas ---- $20</h3>
+			<button onclick="buyFood1()" class="food-btn">Comprar</button>
+			<br>
+			<h3>Taco ----------- $40</h3>
+			<button onclick="buyFood2()" class="food-btn">Comprar</button>
+			<br>
+			<h3>Filete ---------- $80</h3>
+			<button onclick="buyFood3()" class="food-btn">Comprar</button>
+		</div>
+		
+    </main>
+	<footer>
+		<div id="dialog-name" class=" dialog-name hidden">
+			<label for="name">Nombre</label>
+			<input id="name" type="text" placeholder="Pon tu nombre" required>
+			<button onclick="" id="done-btn">Listo</button>
+		</div>
+		<div id="buttons-menu" class="buttons-menu " >
+			<button onclick="showFood()" >Comida</button>
+			<button onclick="showDog()" >Jugar</button>
+			<button onclick="hideText()" >Trabajar</button>
+		</div>
+	</footer>
+	<script type="text/javascript" src="./app.js" ></script>
+</body>
+
+</html>
