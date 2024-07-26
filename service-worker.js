@@ -1,5 +1,5 @@
 // service-worker.js
-
+importScripts("https://cdn.pushalert.co/sw-72597.js");
 self.addEventListener('install', function(event) {
   console.log('Service Worker instalado');
   event.waitUntil(
