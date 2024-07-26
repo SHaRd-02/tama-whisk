@@ -1,4 +1,5 @@
 // Declaring variables
+//
 console.log('app.js cargado');
 let i = 0;
 let speed = 40; /* The speed/duration of the effect in milliseconds */
