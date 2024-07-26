@@ -2,7 +2,7 @@
 
 self.addEventListener('install', function(event) {
   console.log('Service Worker instalado');
-  prompt("Service worker instalado");
+  alert("Service Worker instalado");
   event.waitUntil(
     caches.open('my-cache').then(function(cache) {
       return cache.addAll([
@@ -19,7 +19,7 @@ self.addEventListener('install', function(event) {
 
 self.addEventListener('activate', function(event) {
   console.log('Service Worker activado');
-  prompt("Service worker activado");
+  alert("Service Worker activado");
   event.waitUntil(
     // Aquí puedes colocar código para inicializar el Service Worker, como sincronizar datos
     Promise.resolve() // Solo para evitar el error de waitUntil
