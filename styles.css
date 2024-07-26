@@ -10,7 +10,33 @@ html, body{
     justify-content: center;
     align-items: center;
 	color: #fff;
+	touch-action: manipulation; /* Previene el zoom en la mayoría de los navegadores modernos */
+  	user-select: none;
+	overflow-x: hidden;
+	overflow-y: hidden;
 }
+
+html:-webkit-scrollbar {
+    display: none;
+  }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.challenges-list::-webkit-scrollbar, html::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .challenges-list, html {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 
 .dog-frame{
     height: 34vmin;
