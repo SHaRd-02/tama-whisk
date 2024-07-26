@@ -209,6 +209,15 @@ header{
 progress{
 	width: 100px;
 	height: 20px;
+	border: solid 1px transparent;
+	margin-left: 5px;
+
+}
+
+.stats-text{
+	z-index: 2;
+	position: absolute;
+	margin-right: 20px;
 }
 
 .div-header{
@@ -228,6 +237,62 @@ progress{
 	font-size: 23px;
 	color: gold;
 }
+
+#work-screen{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+
+#work-screen > p{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#stone{
+	width: 200px;
+	height: 200px;
+	margin: 10px auto;
+	margin-left: 73px;
+	background-color: rgb(167, 167, 167);
+	box-shadow: gray 20px -20px;
+}
+
+#stone::before{
+	background-color: gray;
+	width: 200px;
+	height: 200px;
+	box-shadow: gray 20px 10px;
+}
+
+#line-one, #line-two{
+	width: 35px;
+	height: 20px;
+	position: relative;
+	
+	
+}
+
+#line-one{
+	transform: skew(-48deg) translate(-13px, -20px);
+	background-color: gray;
+}
+
+#stone:active{
+	transform: translateY(5px);
+  	box-shadow: 0px 0px 0px 0px gray;
+
+	& #line-one{
+		display: none; !important;
+	}
+}
+
+
+
+
 
 .slide {
 transition: margin 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
